@@ -7,9 +7,9 @@ public class ZkClientDemo1 {
 	static ZkClient zk;
     private static String CONNECT_STRING="120.77.22.187:2181,120.77.22.187:2182,120.77.22.187:2183";
 
-    private static int SESSION_TIMEOUT=100;
+    private static int TIMEOUT=100;
     static {
-        zk=new ZkClient(CONNECT_STRING,SESSION_TIMEOUT,SESSION_TIMEOUT,new MyZkSerializer());
+        zk=new ZkClient(CONNECT_STRING,TIMEOUT,TIMEOUT,new MyZkSerializer());
     }
 
     private static void initData(){

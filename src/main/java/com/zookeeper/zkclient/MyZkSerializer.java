@@ -15,10 +15,12 @@ import org.I0Itec.zkclient.serialize.ZkSerializer;
  */
 public class MyZkSerializer implements ZkSerializer{
 
+	private static final String ENCODE = "UTF-8";
+	
 	public Object deserialize(byte[] bytes) throws ZkMarshallingError {
 		// TODO Auto-generated method stub
 		try {
-			return new String(bytes,"UTF-8");
+			return new String(bytes,ENCODE);
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -30,7 +32,7 @@ public class MyZkSerializer implements ZkSerializer{
 	public byte[] serialize(Object data) throws ZkMarshallingError {
 		
 		try {
-			return String.valueOf(data).getBytes("UTF-8");
+			return String.valueOf(data).getBytes(ENCODE);
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

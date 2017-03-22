@@ -19,10 +19,10 @@ public class ZkclientDemo {
 
 	 private static String CONNECT_STRING="120.77.22.187:2181,120.77.22.187:2182,120.77.22.187:2183";
 
-	    private static int SESSION_TIMEOUT=3000;
+	    private static int TIMEOUT=3000;
 
 	    public static void main(String[] args) {
-	        ZkClient zkClient=new ZkClient(CONNECT_STRING,SESSION_TIMEOUT,SESSION_TIMEOUT,new MyZkSerializer());
+	        ZkClient zkClient=new ZkClient(CONNECT_STRING,TIMEOUT,TIMEOUT,new MyZkSerializer());
 	        try {
 	            zkClient.subscribeChildChanges("/configuration", new IZkChildListener() {
 	                public void handleChildChange(String parentPath, List<String> currentChilds) throws Exception {
