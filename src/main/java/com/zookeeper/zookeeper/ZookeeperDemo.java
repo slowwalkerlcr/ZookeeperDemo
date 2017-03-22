@@ -1,4 +1,4 @@
-package com.zookeeper.lvcr;
+package com.zookeeper.zookeeper;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
