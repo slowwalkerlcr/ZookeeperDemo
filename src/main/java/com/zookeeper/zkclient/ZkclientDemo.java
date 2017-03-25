@@ -17,7 +17,7 @@ import org.I0Itec.zkclient.ZkClient;
  */
 public class ZkclientDemo {
 
-	 private static String CONNECT_STRING="120.77.22.187:2181,120.77.22.187:2182,120.77.22.187:2183";
+	 private static String CONNECT_STRING="192.168.148.130:2181,192.168.148.130:2182,192.168.148.130:2183";
 
 	    private static int TIMEOUT=3000;
 
